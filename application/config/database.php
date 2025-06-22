@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'sql202.infinityfree.com',
-	'username' => 'if0_39293573',
-	'password' => 'magnam2442',
-	'database' => 'if0_39293573_jbt',
+    	'hostname' => getenv('DB_HOST'),
+   	'username' => getenv('DB_USERNAME'),
+    	'password' => getenv('DB_PASSWORD'),
+    	'database' => getenv('DB_DATABASE'),
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
