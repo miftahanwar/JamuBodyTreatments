@@ -1,5 +1,6 @@
 {
-    "require": {
-        "spipu/html2pdf": "^5.2"
-    }
+  "require": {
+    "php": "^8.1",
+    "spipu/html2pdf": "^5.2"
+  }
 }
