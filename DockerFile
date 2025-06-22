@@ -1,0 +1,18 @@
+# Gunakan PHP 8.0 dengan Apache
+FROM php:8.0-apache
+
+# Aktifkan Apache rewrite module (wajib untuk CodeIgniter)
+RUN a2enmod rewrite
+
+# Install ekstensi PHP yang kamu butuhkan
+# Contoh: mysqli, pdo_mysql (ganti sesuai kebutuhan)
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+# Salin semua file project ke folder website Apache
+COPY . /var/www/html
+
+# Ubah hak akses (opsional tapi aman)
+RUN chown -R www-data:www-data /var/www/html
+
+# (Opsional) Set working directory
+WORKDIR /var/www/html
