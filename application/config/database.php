@@ -73,21 +73,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-public $default = [
-    'DSN'      => '',
-    'hostname' => getenv('mysql.railway.internal'),
-    'username' => getenv('root'),
-    'password' => getenv('TpxWfyBsxwgCIGjfVzjeUZHDuOErleWK'),
-    'database' => getenv('railway'),
-    'DBDriver' => 'MySQLi',
-    'port'     => getenv('3306'),
-    'charset'  => 'utf8',
-    'DBCollat' => 'utf8_general_ci',
-    'swapPre'  => '',
-    'encrypt'  => false,
-    'compress' => false,
-    'strictOn' => false,
-    'failover' => [],
-    'saveQueries' => true,
-];
-
+$db['default'] = array(
+    'dsn'   => '',
+    'hostname' => 'mysql.railway.internal',
+    'username' => 'root',
+    'password' => 'TpxWfyBsxwgCIGjfVzjeUZHDuOErleWK',
+    'database' => 'railway',
+    'dbdriver' => 'mysqli',
+    'dbprefix' => '',
+    'pconnect' => FALSE,
+    'db_debug' => (ENVIRONMENT !== 'production'),
+    'cache_on' => FALSE,
+    'cachedir' => '',
+    'char_set' => 'utf8',
+    'dbcollat' => 'utf8_general_ci',
+    'swap_pre' => '',
+    'encrypt' => FALSE,
+    'compress' => FALSE,
+    'stricton' => FALSE,
+    'failover' => array(),
+    'save_queries' => TRUE
+);
