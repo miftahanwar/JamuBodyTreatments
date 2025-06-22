@@ -75,12 +75,12 @@ $query_builder = TRUE;
 
 public $default = [
     'DSN'      => '',
-    'hostname' => getenv('DB_HOST'),
-    'username' => getenv('DB_USERNAME'),
-    'password' => getenv('DB_PASSWORD'),
-    'database' => getenv('DB_DATABASE'),
+    'hostname' => getenv('mysql.railway.internal'),
+    'username' => getenv('root'),
+    'password' => getenv('TpxWfyBsxwgCIGjfVzjeUZHDuOErleWK'),
+    'database' => getenv('railway'),
     'DBDriver' => 'MySQLi',
-    'port'     => getenv('DB_PORT'),
+    'port'     => getenv('3306'),
     'charset'  => 'utf8',
     'DBCollat' => 'utf8_general_ci',
     'swapPre'  => '',
