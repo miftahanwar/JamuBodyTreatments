@@ -74,12 +74,12 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-    'dsn'   => '',
-    'hostname' => 'mysql.railway.internal',
+    'hostname' => 'shinkansen.proxy.rlwy.net',
     'username' => 'root',
     'password' => 'TpxWfyBsxwgCIGjfVzjeUZHDuOErleWK',
     'database' => 'railway',
     'dbdriver' => 'mysqli',
+    'port'     => '27230', // port public, misal 5501
     'dbprefix' => '',
     'pconnect' => FALSE,
     'db_debug' => (ENVIRONMENT !== 'production'),
@@ -88,7 +88,7 @@ $db['default'] = array(
     'char_set' => 'utf8',
     'dbcollat' => 'utf8_general_ci',
     'swap_pre' => '',
-    'encrypt' => FALSE,
+    'encrypt'  => FALSE,
     'compress' => FALSE,
     'stricton' => FALSE,
     'failover' => array(),
